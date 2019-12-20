@@ -1,14 +1,9 @@
 package com.prostaks.pazar43.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
 
-import javax.persistence.Entity;
+@Getter
+public enum Region {
 
-@Entity
-@AllArgsConstructor
-@NoArgsConstructor
-@Data
-public class Region {
+
 }
