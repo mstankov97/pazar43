@@ -1,6 +1,6 @@
 package com.prostaks.pazar43;
 import com.prostaks.pazar43.models.User;
-import com.prostaks.pazar43.repositories.UserRepository;
+import com.prostaks.pazar43.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -23,7 +23,7 @@ public class Pazar43Application implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         User user = new User();
-        user.id = 1;
+        user.id = 1L;
         user.email = "asd@gmail.com";
         user.userName = "Panda";
         user.password = passwordEncoder.encode("test12345");

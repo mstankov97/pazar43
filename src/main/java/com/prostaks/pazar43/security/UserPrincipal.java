@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 @Data
 public class UserPrincipal implements UserDetails {
 
-    public int id;
+    public Long id;
     public String userName;
     public boolean verified;
 
@@ -30,7 +30,7 @@ public class UserPrincipal implements UserDetails {
 
 
     // ADD USER PARAMETERS YOU WANT TO RETURN AS CURRENT USER
-    private UserPrincipal(int id, String email, String userName, String password, boolean verified, Collection<? extends GrantedAuthority> authorities) {
+    private UserPrincipal(Long id, String email, String userName, String password, boolean verified, Collection<? extends GrantedAuthority> authorities) {
         this.id = id;
         this.email = email;
         this.password = password;

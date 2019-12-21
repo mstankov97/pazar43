@@ -1,8 +1,7 @@
 package com.prostaks.pazar43.security;
 
-import com.prostaks.pazar43.repositories.UserRepository;
+import com.prostaks.pazar43.repository.UserRepository;
 import com.prostaks.pazar43.services.CustomUserDetailsService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -68,6 +67,8 @@ public class jwtConfiguration extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 // ADD ROUTES FOR LOGIN WITH .permitAll()
                 .antMatchers("/login").permitAll()
+                .antMatchers("/posts").permitAll()
+                .antMatchers("/current_user").permitAll()
                 .anyRequest().authenticated();
         http.addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
     }

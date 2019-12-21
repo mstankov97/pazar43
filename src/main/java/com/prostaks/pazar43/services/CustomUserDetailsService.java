@@ -1,7 +1,7 @@
 package com.prostaks.pazar43.services;
 
 import com.prostaks.pazar43.models.User;
-import com.prostaks.pazar43.repositories.UserRepository;
+import com.prostaks.pazar43.repository.UserRepository;
 import com.prostaks.pazar43.security.UserPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
